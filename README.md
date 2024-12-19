@@ -85,7 +85,7 @@ import { Roles } from '../app.roles';
 import { Post } from './dtos/post.dto';
 import { Comment } from './dtos/comment.dto';
 
-export type Subjects = InferSubjects<typeof Post, typeof Comment>;
+export type Subjects = InferSubjects<typeof Post | typeof Comment>;
 
 export const permissions: Permissions<Roles, Subjects, Actions> = {
   everyone({ can }) {
